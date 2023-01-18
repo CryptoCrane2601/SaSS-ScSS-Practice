@@ -10,13 +10,17 @@
 
 @mixin media-min-width($width) {
   @media (min-width: $width) {
-    width: 30rem;
+    @content;
   }
 }
 
 html {
   font-size: 94.75%;
-  @include media-min-width(40rem);
+
+  @include media-min-width(40rem){
+    font-size: 125%;
+  }
+    
 }
 
 body {
@@ -42,8 +46,9 @@ body {
   text-align: $text-align;
   width: 90%;
   box-sizing: $box-sizing;
-  @include media-min-width(40rem);
-
+  @include media-min-width(40rem){
+    width: 30rem;
+  }
 }
 
 .sass-introduction {
@@ -88,12 +93,13 @@ h1 {
     display: block;
     padding: $size-tiny;
     border: $border-default;
-  }
-  .documentation-link:hover,
-  .documentation-links  {
-    color: white;
-    background: map-get($colors, secondary);
-    border-color: map-get($colors, secondary);
-  }
+
+    &:hover,
+    &:active {
+      color: white;
+      background: map-get($colors, secondary);
+      border-color: map-get($colors, secondary);
+    }
 }
 
+}
