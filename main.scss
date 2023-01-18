@@ -1,7 +1,8 @@
 // $main-color: #521751;
 $colors: (main: #521751, secondary: #fa923f);
 $border-default: 0.05rem solid map-get($colors, main);
-
+$text-align: center;
+$box-sizing: border-box;
 
 @import "typography.css";
 
@@ -25,40 +26,41 @@ body {
   }
   align-items: center;
   padding: 3rem 0;
-  box-sizing: border-box;
+  box-sizing: $box-sizing;
 }
 
 .sass-introduction {
   border: $border-default;
   background: lighten(map-get($colors, main), 72%);
   padding: 2rem;
-  text-align: center;
+  text-align: $text-align;
   box-shadow: 0.2rem 0.2rem 0.1rem #ccc;
   width: 90%;
-  box-sizing: border-box;
-}
+  box-sizing: $box-sizing;
 
-.sass-introduction p {
+p {
   margin: 0;
+  }
 }
 
 .sass-details {
   border: $border-default;
   background: lighten(map-get($colors, main), 72%);
   padding: 1rem;
-  text-align: center;
+  text-align: $text-align;
   margin: 2rem 0;
   width: 90%;
-  box-sizing: border-box;
+  box-sizing: $box-sizing;
 }
 
 .section-header {
   border-bottom: $border-default;
+
+h1 {
+  margin: 0 0 1rem 0;
+  }  
 }
 
-.section-header h1 {
-  margin: 0 0 1rem 0;
-}
 
 .documentation-links {
   list-style: none;
