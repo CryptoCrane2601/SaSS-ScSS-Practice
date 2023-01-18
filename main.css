@@ -9,7 +9,7 @@ html {
 }
 @media (min-width: 40rem) {
   html {
-    font-size: 125%;
+    width: 30rem;
   }
 }
 
@@ -66,11 +66,11 @@ body {
   list-style: none;
   margin: 1rem 0 0 0;
   padding: 0;
+  flex-direction: column;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  flex-direction: column;
 }
 .documentation-links li {
   margin: 0.2rem 0;
